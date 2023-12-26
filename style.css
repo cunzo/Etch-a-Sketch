@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Imposta l'altezza del contenuto visibile al 100% dell'altezza della viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra il contenuto verticalmente */
+    align-items: center;
+    overflow: hidden; /* Nasconde l'overflow per evitare lo scroll */
+}
+
+.title {
+    flex: 0 0 auto; /* Il titolo non si ridimensiona e non cresce oltre il suo contenuto */
+    margin: 10px 0; /* Aggiunge un margine superiore e inferiore */
+}
+
+.container {
+    flex: 1 0 auto; /* Il container cresce per occupare lo spazio rimanente */
+    width: 100%; /* Usa l'intera larghezza disponibile */
+    max-width: 1000px; /* Imposta una larghezza massima se necessario */
+    overflow: auto; /* Permette lo scroll all’interno del container, se necessario */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Assicurati che la somma delle altezze di title e container non superi l'altezza della viewport */
+@media (max-width: 768px) {
+    .title {
+        margin: 5px 0; /* Riduci il margine su schermi più piccoli */
+    }
+    .container {
+        padding: 5px; /* Riduci il padding su schermi più piccoli */
+    }
+}
+
+.row {
+    display: flex;
+    flex: 1; /* Divide lo spazio verticale in modo uniforme tra le righe */
+}
+
+.square {
+    flex: 1; /* Divide lo spazio orizzontale in modo uniforme tra i quadrati */
+    aspect-ratio: 1; /* Mantiene i quadrati proporzionali */
+    background-color: #b716df;
+    border: 1px solid #000;
+    box-sizing: border-box; /* Include il bordo e il padding nel calcolo della larghezza e altezza */
+}
