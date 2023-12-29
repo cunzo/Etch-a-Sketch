@@ -33,6 +33,10 @@ body {
     min-width: 50px; /* Imposta una larghezza minima per i quadrati per evitare che diventino troppo piccoli */
 }
 
+:hover.square {
+    background-color: #fff;
+}
+
 @media screen and (max-width: 1023px) {
     .container {
         max-width: 100%; /* Il container può espandersi fino al 100% della larghezza del viewport */
