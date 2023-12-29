@@ -5,13 +5,14 @@ body {
     min-height: 100vh; /* Altezza minima del viewport */
 }
 
-.title {
+.titleContainer {
     flex: 0 0 auto; /* Il titolo non si ridimensiona e ha l'altezza del suo contenuto */
     margin: 10px 0; /* Aggiunge un margine superiore e inferiore */
     align-self: center; /* Centra il titolo se la larghezza è inferiore a max-width */
 }
 
 .container {
+    display: none;
     flex: 1; /* Il container cresce per occupare lo spazio rimanente */
     width: 100%; /* Usa l'intera larghezza disponibile */
     max-width: 1000px; /* Imposta una larghezza massima */
@@ -21,7 +22,7 @@ body {
 
 .row {
     display: flex;
-    flex-wrap: wrap; /* Permette alle righe di andare a capo */
+    flex-wrap: nowrap; /* Permette alle righe di andare a capo */
 }
 
 .square {
@@ -33,13 +34,43 @@ body {
     min-width: 50px; /* Imposta una larghezza minima per i quadrati per evitare che diventino troppo piccoli */
 }
 
-:hover.square {
+/* :hover.square {
     background-color: #fff;
-}
+} */
 
 @media screen and (max-width: 1023px) {
     .container {
         max-width: 100%; /* Il container può espandersi fino al 100% della larghezza del viewport */
     }
     /* Non è necessario aggiungere regole specifiche per .square qui, a meno che non si voglia personalizzarli ulteriormente */
+}
+
+button {
+	box-shadow:inset -2px 2px 2px 0px #e184f3;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:15px;
+	border:2px solid #a511c0;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    max-height: 35px;
+    align-self: center;
+}
+button:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+
+.containerBtnStart{
+    align-self: center;
 }
